@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гулящий І.С. ІА-91</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="./script.js"></script>
+</head>
+
+<body>
+  <h2>
+    Гулящий Ігор Сергійович
+  </h2>
+  <div>
+    Hародився хлопчик 24 січня 2002 року у місті Кропивницький
+  </div>
+  <ul>
+    Освіта:
+    <li onclick="changeColor()" id="elem">
+      Кропивницький областний навчально-виховний комплекс. Гімназія-інтернат школа мистецтв
+    </li>
+    <li onclick="changeSecColor()" id="elem2">
+      Університет: КПІ ФІОТ 126
+    </li>
+  </ul>
+  <ul>
+    Хобі:
+    <li>
+      Теніс
+    </li>
+    <li>
+      Футбол
+    </li>
+    <li>
+      писати html-5 файли
+    </li>
+  </ul>
+  <ul>Улюблені фільми:
+    <ol type="1">
+      <li>
+        Острів проклятих
+      </li>
+      <li>
+        Револьвер
+      </li>
+      <li>
+        на цьому досить
+      </li>
+    </ol>
+  </ul>
+  <div>
+    Рідне місто - Кропивницький. Лежить у межах Придніпровської височини, на берегах річки Інгул, де в неї вливаються
+    менші річки — Сугоклія та Біянка. Танцювальна столиця України.
+  </div>
+  <div class="img">
+    <a href="https://kr-rada.gov.ua"><img src="./kropyvnytskyj-misto-1.jpg" id="image"></a>
+  </div>
+  <input type="button" value="Збільшити" class="but1" onclick="zoomIncrease()">
+  <input type="button" value="Зменшити" class="but2" onclick="zoomDecrease()">
+  <input type="button" value="Видалити" class="but3" onclick="deleteImg()">
+  <input type="button" value="Додати" class="but4" onclick="addImg()">
+</body>
+
+</html>
