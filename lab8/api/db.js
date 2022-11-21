@@ -3,9 +3,9 @@ const { Pool } = require('pg');
 class Database {
   constructor() {
     this.config = {
-      user: 'igorgulyaschy',
+      user: 'postgres',
       host: 'localhost',
-      database: 'lab8',
+      database: 'postgres',
       password: process.env.PASSWORD,
       port: 5432,
     };

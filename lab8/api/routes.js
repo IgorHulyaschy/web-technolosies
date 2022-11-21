@@ -6,10 +6,13 @@ const router = Router()
 
 router.post('/sign-up', async (req, res) => {
   const { fname, lname, password, email } = req.body
-  await db.query(`
-    INSERT INTO users (email, fname, lname, password) VALUES ('${email}', '${fname}', '${lname}', '${password}')
+  const {rows } = await db.query(`
+    INSERT INTO users (email, fname, lname, password) VALUES ('${email}', '${fname}', '${lname}', '${password}') RETURNING *
   `)
-  res.sendStatus(201)
+  console.log(rows[0].id)
+  res.send({
+    token: jwt.sign(rows[0].id)
+  })
 })
 
 router.post('/sign-in', async (req, res) => {
