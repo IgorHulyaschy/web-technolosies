@@ -9,7 +9,6 @@ router.post('/sign-up', async (req, res) => {
   const {rows } = await db.query(`
     INSERT INTO users (email, fname, lname, password) VALUES ('${email}', '${fname}', '${lname}', '${password}') RETURNING *
   `)
-  console.log(rows[0].id)
   res.send({
     token: jwt.sign(rows[0].id)
   })

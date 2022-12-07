@@ -6,10 +6,10 @@ export const Me = () => {
   const fetchUser = async (token) => {
     const response = await axios.get('/me', {
       headers: {
-        'Authorization': 'Bearer' + token,
+        'Authorization': 'Bearer ' + token,
       }
     })
-    setUser(response);
+    setUser(response.data);
   }
 
   useEffect(() => {
@@ -24,8 +24,8 @@ export const Me = () => {
 
   return (
     <div className="auth-form-container">
-      <h2>{user.name}</h2>
-      <h2>{user.email}</h2>
+      <h2>Hello</h2>
+      <h2>{user.fname} {user.lname}</h2>
     </div>
   )
 }

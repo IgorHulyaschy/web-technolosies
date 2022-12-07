@@ -55,7 +55,7 @@ export const SignUp = () => {
           id="password"
           name="password"
         />
-        <button type="submit">Log In</button>
+        <button type="submit">Sign Up</button>
       </form>
       <button
         className="link-btn"
